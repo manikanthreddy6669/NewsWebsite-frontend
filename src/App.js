@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import NewsList from './components/NewsList'; // Update the path to point to the components folder
+import './App.css'; // Ensure the CSS is imported
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="App-header centered-header">
+        <h1>Welcome to the News Website</h1>
       </header>
+      <main>
+        <NewsList />
+      </main>
     </div>
   );
-}
+};
 
 export default App;
